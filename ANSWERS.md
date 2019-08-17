@@ -6,7 +6,7 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 
 
-
+RDBMS is the actual database, while SQL is merely how you access and utilize it
 
 
 
