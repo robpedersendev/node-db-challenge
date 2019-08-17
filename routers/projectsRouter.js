@@ -29,3 +29,24 @@ router.post("/", async (req, res) => {
     res.status(500).json(error);
   }
 });
+
+router.get("/:id", (req, res) => {
+  db.findById(req.params.id)
+    .then(project => {
+      if (project) {
+        console.log(
+          `This is coming from the ${
+            req.method
+          } request within projectsRouter.js. You are now viewing the project with the id of: ${
+            req.params.id
+          }.`
+        );
+        res.status(200).json(project);
+      } else {
+        res.status(404), json({ message: "No id was found" });
+      }
+    })
+    .catch(error => {
+      res.status(500).json(error);
+    });
+});
