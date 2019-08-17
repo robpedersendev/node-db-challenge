@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const db = require("../models/actionsModel-db");
+const db = require("../db-models/actionsModel-db");
 
 router.get("/", async (req, res) => {
   try {
