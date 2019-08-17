@@ -20,8 +20,8 @@ server.get("/", (req, res) => {
   res.status(200).send("<h1>Welcome to the NodeDB Challenge</h1>");
 });
 
-server.use("/api/projects", require(".routers/projectsRouter"));
-server.use("/api/actions", require(".routers/actionsRouter"));
+server.use("/api/projects", require("./routers/projectsRouter"));
+server.use("/api/actions", require("./routers/actionsRouter"));
 
 server.listen(PORT, () => {
   console.log(`The server is listening on ${port}`);
