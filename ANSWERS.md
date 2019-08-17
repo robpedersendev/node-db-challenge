@@ -43,3 +43,8 @@ A foreign Key
 
 
 1. What do we need in order to have a _many to many_ relationship between two tables.
+
+
+
+
+A third "temp table" of foreign keys the references the other two tables
