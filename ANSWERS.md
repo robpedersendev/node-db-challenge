@@ -21,7 +21,7 @@ RDBMS is the actual database, while SQL is merely how you access and utilize it
 
 
 
-
+A primary key is needed to uniquely identify rows to maintain data integrity when we manage the record
 
 
 
