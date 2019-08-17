@@ -24,5 +24,5 @@ server.use("/api/projects", require("./routers/projectsRouter"));
 server.use("/api/actions", require("./routers/actionsRouter"));
 
 server.listen(PORT, () => {
-  console.log(`The server is listening on ${port}`);
+  console.log(`The server is listening on ${PORT}`);
 });
