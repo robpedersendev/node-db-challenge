@@ -15,3 +15,17 @@ router.get("/", async (req, res) => {
     res.status(500).json({ message: error });
   }
 });
+
+router.post("/", async (req, res) => {
+  try {
+    const newProject = await db.add(req.body);
+    console.log(
+      `This is coming from the ${
+        req.method
+      } request within projectsRouter.js. This project: ${newProject} was added`
+    );
+    res.status(200).json(newProject);
+  } catch (error) {
+    res.status(500).json(error);
+  }
+});
