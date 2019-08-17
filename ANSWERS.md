@@ -35,7 +35,7 @@ A primary key is needed to uniquely identify rows to maintain data integrity whe
 
 
 
-
+A foreign Key
 
 
 
