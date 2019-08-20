@@ -1,28 +1,12 @@
 const express = require("express");
-const helmet = require("helmet");
+const projectsRouter = require("./routers/projects");
+const resourcesRouter = require("./routers/resources");
+const tasksRouter = require("./routers/tasks");
 
-const PORT = process.env.PORT || 6500;
+const app = express();
+app.use(express.json());
+app.use("/api/projects", projectsRouter);
+app.use("/api/resources", resourcesRouter);
+app.use("/api/tasks", tasksRouter);
 
-const server = express();
-
-server.use(helmet());
-server.use(express.json());
-
-//Logs to the terminal
-server.use(logger);
-
-function logger(req, res, next) {
-  console.log(`${req.method} at ${req.url} was just performed`);
-  next();
-}
-
-server.get("/", (req, res) => {
-  res.status(200).send("<h1>Welcome to the NodeDB Challenge</h1>");
-});
-
-server.use("/api/projects", require("./routers/projectsRouter"));
-server.use("/api/actions", require("./routers/actionsRouter"));
-
-server.listen(PORT, () => {
-  console.log(`The server is listening on ${PORT}`);
-});
+module.exports = app;
