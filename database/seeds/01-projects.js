@@ -11,7 +11,7 @@ exports.seed = function(knex) {
       completed: true
     },
     {
-      name: "project ii",
+      name: "project iii",
       description: "project iii's description",
       completed: false
     },
