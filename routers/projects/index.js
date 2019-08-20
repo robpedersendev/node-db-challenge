@@ -42,3 +42,25 @@ router.get("/:id", async (req, res) => {
     });
   }
 });
+
+router.post("/", async (req, res) => {
+  const { name, description, completed } = req.body;
+
+  if (!name) {
+    return res.status(400).json({
+      error: "Project property `name` is required!"
+    });
+  }
+
+  try {
+    const [id] = await db("projects").insert({ name, description, completed });
+    const [project] = await db("projects").where({ id });
+    res.status(201).json(project);
+  } catch (error) {
+    res.status(500).json({
+      error: "Error occurred while attempting to add the project"
+    });
+  }
+});
+
+module.exports = router;
