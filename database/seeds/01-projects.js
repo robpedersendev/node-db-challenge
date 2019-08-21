@@ -22,3 +22,5 @@ exports.seed = function(knex) {
     }
   ]);
 };
+
+//This seed file adds in 4 projects to the projects table
