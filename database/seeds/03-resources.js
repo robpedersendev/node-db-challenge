@@ -6,3 +6,6 @@ exports.seed = function(knex) {
     { name: "resource iv", description: "resource iv's description" }
   ]);
 };
+
+
+//This seed file inserts pre-existing data to the resources table
