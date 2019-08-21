@@ -26,3 +26,5 @@ exports.seed = function(knex) {
     }
   ]);
 };
+
+//This seed file inserts data into the tasks table
