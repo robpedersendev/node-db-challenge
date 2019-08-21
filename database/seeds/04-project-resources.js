@@ -8,3 +8,6 @@ exports.seed = function(knex) {
     { project_id: 2, resource_id: 4 }
   ]);
 };
+
+
+//This seed file inserts pre-existing data into the project_resoruces table
